@@ -112,6 +112,8 @@ Que se veria de la siguiente manera
 
 Me falto subir la instancia en AWS.
 
+![image](https://github.com/user-attachments/assets/f5fb9839-94e8-40f2-9261-289c019562fa)
+
 
 ## Clase que nos dice si son primos o no ##
 
