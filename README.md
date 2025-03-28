@@ -76,13 +76,7 @@ Al colocarlo en el navegador vamos a obtener lo siguiente:
 
 Creamos la instancia en AWS EC2.
 
-![image](https://github.com/user-attachments/assets/235034e2-76fb-4234-aa50-fb34a714b1f4)
-
-
-Ahora configuramos el grupo de seguridad de la instancia EC2 para permitir el tráfico entrante en el puerto 50000 (o el puerto que hayas configurado en tu aplicación Spring Boot).
-
-
-![image](https://github.com/user-attachments/assets/520a5553-1dc2-4a30-9930-c02f078a3a10)
+![image](https://github.com/user-attachments/assets/5a3748dc-4195-429e-a7ce-c7a4c4526133)
 
 
 Desplegamos nuestro codigo en AWS
@@ -111,16 +105,12 @@ java -jar /home/ec2-user/app.jar
 4. Y para finalizar accedemos a la aplicacion
 
 ```bash
-http://EC2_PUBLIC_IP:5000/
+http://EC2_PUBLIC_IP:8000/primes?value=100
 ```
 
 Que se veria de la siguiente manera
 
-![image](https://github.com/user-attachments/assets/a438e938-a59a-4055-9781-2b6102e5eeae)
-
-
-
-
+Me falto subir la instancia en AWS.
 
 
 ## Clase que nos dice si son primos o no ##
