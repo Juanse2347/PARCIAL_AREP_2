@@ -33,6 +33,95 @@ Para los primos, puede usar su función de factores así:
 - de ahí en adelante recuerde que un número es primo si solo es divisible por 1 y por si mismo.
 - Es decir un número es primo si el tamaño del conjunto de factores es 2.
 
+## 🚀 Instalación y Ejecución
+### 1️⃣ Clonar el repositorio
+```bash
+git clone https://github.com/Juanse2347/PARCIAL_AREP_2
+cd PARCIAL_AREP_2
+```
+
+### 2️⃣ Compilar el proyecto con Maven
+```bash
+mvn clean install
+```
+
+![Image](https://github.com/user-attachments/assets/9a3392f2-fd28-4615-bfa2-ea5b9fdf9c00)
+
+
+### 3️⃣ Ejecutar el servidor 
+
+```bash
+mvn clean compile exec:java -Dexec.mainClass="edu.eci.arep.MathService"
+```
+
+![image](https://github.com/user-attachments/assets/09ec92c3-aca2-4fb1-8380-e1f1e949a505)
+
+
+
+### 4️⃣ Probar con un navegador o `curl`
+```bash
+http://localhost:8000/primes?value=100
+```
+
+![image](https://github.com/user-attachments/assets/3a6d771d-6705-4e48-9639-7a7cf8d8ba46)
+
+
+
+Al colocarlo en el navegador vamos a obtener lo siguiente:
+
+![image](https://github.com/user-attachments/assets/81b92aa7-4486-4c14-8e4a-889eeb69fe60)
+
+
+## 🚀 Despliegue AWS
+
+Creamos la instancia en AWS EC2.
+
+![image](https://github.com/user-attachments/assets/235034e2-76fb-4234-aa50-fb34a714b1f4)
+
+
+Ahora configuramos el grupo de seguridad de la instancia EC2 para permitir el tráfico entrante en el puerto 50000 (o el puerto que hayas configurado en tu aplicación Spring Boot).
+
+
+![image](https://github.com/user-attachments/assets/520a5553-1dc2-4a30-9930-c02f078a3a10)
+
+
+Desplegamos nuestro codigo en AWS
+
+1. Subimos el proyecto a AWS
+
+```bash
+scp -i key.pem target/app.jar ec2-user@IP_EC2:/home/ec2-user/
+```
+
+![image](https://github.com/user-attachments/assets/ab4df350-7bec-4fb3-87e0-a576f76c1025)
+
+
+2. Conectamos a nuestra instancia EC2
+
+```bash
+ssh -i key.pem ec2-user@IP_EC2
+```
+
+3. Ejecutamos la aplicacion 
+
+```bash
+java -jar /home/ec2-user/app.jar
+```
+
+4. Y para finalizar accedemos a la aplicacion
+
+```bash
+http://EC2_PUBLIC_IP:5000/
+```
+
+Que se veria de la siguiente manera
+
+![image](https://github.com/user-attachments/assets/a438e938-a59a-4055-9781-2b6102e5eeae)
+
+
+
+
+
 
 ## Clase que nos dice si son primos o no ##
 
